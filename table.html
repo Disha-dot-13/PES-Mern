@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f3f3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            border: 1px solid #333;
+            padding: 12px 18px;
+            text-align: center;
+        }
+
+        th {
+            background: #dfeaf7;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th colspan="3">Student Details</th>
+        </tr>
+
+        <tr>
+            <th>Name</th>
+            <th>Dept</th>
+            <th>Marks</th>
+        </tr>
+
+        <tr>
+            <td>Riya</td>
+            <td>CSE</td>
+            <td>80</td>
+        </tr>
+
+        <tr>
+            <td>Arun</td>
+            <td>ECE</td>
+            <td>60</td>
+        </tr>
+
+        <tr>
+            <td colspan="2"><strong>Average</strong></td>
+            <td rowspan="2"><strong>70</strong></td>
+        </tr>
+    </table>
+</body>
+</html>

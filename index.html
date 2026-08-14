@@ -3,10 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Favorite Movies</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f4f4;
+            color: #222;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #1f1f1f;
+        }
+
+        .movie-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            gap: 25px;
+        }
+
+        .movie-item {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .movie-item img {
+            width: 220px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .movie-text {
+            flex: 1;
+        }
+
+        .movie-text h2 {
+            margin: 0 0 10px;
+            color: #111;
+        }
+
+        .movie-text p {
+            margin: 0;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        @media (max-width: 700px) {
+            .movie-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .movie-item img {
+                width: 100%;
+                height: 220px;
+            }
+        }
+
+        .video-section {
+            margin-top: 40px;
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .video-section h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
 </head>
 <body>
-    <h1> first page</h1>
-    
+    <nav style="padding: 15px 20px; background: #1f1f1f; text-align: center;">
+        <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: none; font-weight: bold;">Go to Google</a>
+    </nav>
+
+    <div class="container">
+        <h1>My Favorite Hindi Movies</h1>
+
+        <ol class="movie-list">
+            <li class="movie-item">
+                <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=900&q=80" alt="3 Idiots movie poster">
+                <div class="movie-text">
+                    <h2>3 Idiots</h2>
+                    <p>Ek inspiring aur funny film jo education, friendship aur zindagi ke asli maksad ko dikhati hai. Isme comedy ke saath deep life lessons bhi milte hain.</p>
+                </div>
+            </li>
+
+            <li class="movie-item">
+                <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=900&q=80" alt="Lagaan movie poster">
+                <div class="movie-text">
+                    <h2>Lagaan</h2>
+                    <p>Ek powerful period drama jisme cricket, patriotism aur village ki kadi mehnat ko dikhaya gaya hai. Film ek inspiring underdog story hai.</p>
+                </div>
+            </li>
+
+            <li class="movie-item">
+                <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=900&q=80" alt="Dilwale Dulhania Le Jayenge movie poster">
+                <div class="movie-text">
+                    <h2>Dilwale Dulhania Le Jayenge</h2>
+                    <p>Ek classic romantic film jo love, family values aur commitment ka sweet mix dikhati hai. Yeh Bollywood ka ek iconic romance hai.</p>
+                </div>
+            </li>
+        </ol>
+
+        <div class="video-section">
+            <h2>React.js Tutorial for Beginners</h2>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/Ke90Tje7VS0" title="React JS Tutorial for Beginners" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
