@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CSS Position Demo</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#f5f7fa;color:#111}
+    header{background:#0b74de;color:#fff;padding:12px 16px}
+    main{max-width:1100px;margin:18px auto;padding:0 16px}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Position Demo</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;margin:16px;background:#f7f9fb;color:#111}
+    h1{margin:0 0 12px}
+    .row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+    .box{flex:1 1 200px;background:#fff;padding:12px;border-radius:8px;border:1px solid #e3e8ee;min-height:80px}
+
+    /* position examples */
+    .relative{position:relative;top:8px;left:8px;background:#eef6ff}
+    .abs-wrap{position:relative;height:120px;border:1px dashed #d0d7e6;padding:8px}
+    .absolute{position:absolute;top:8px;right:8px;background:#fff3cd;padding:6px;border-radius:4px}
+    .fixed{position:fixed;bottom:12px;right:12px;background:#d4edda;padding:8px;border-radius:6px}
+    .sticky-demo{height:160px;overflow:auto;border:1px solid #e2e8f0;border-radius:6px}
+    .sticky-header{position:sticky;top:0;background:#0b74de;color:#fff;padding:8px;border-radius:4px}
+  </style>
+</head>
+<body>
+  <h1>Simple Position Examples</h1>
+
+  <div class="row">
+    <div class="box">Static (default) — normal flow</div>
+    <div class="box relative">Relative — moved with top/left but keeps original space</div>
+    <div class="box">
+      Absolute example
+      <div class="abs-wrap" style="margin-top:8px;">
+        <div class="absolute">I'm absolute (top-right of box)</div>
+        Container content behind absolute element.
+      </div>
+    </div>
+  </div>
+
+  <h3>Sticky inside a scrollable area</h3>
+  <div class="sticky-demo">
+    <div class="sticky-header">I'm sticky — I stick to the top of this area</div>
+    <div style="padding:10px">
+      <p>Scroll this box to see the sticky header behavior.</p>
+      <!doctype html>
+      <html lang="en">
+      <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Boxes Only</title>
+        <style>
+          :root{--gap:12px}
+          body{margin:24px;background:#f7f9fb}
+          .wrapper{max-width:900px;margin:0 auto}
+          .row{display:flex;gap:var(--gap);margin-bottom:16px;align-items:flex-start}
+          .box{width:140px;height:90px;border-radius:8px}
+          .static{background:#cbd5e1}
+          .relative{background:#a3d5ff;position:relative;top:12px;left:12px}
+          .abs-container{position:relative;width:320px;height:110px;border-radius:8px}
+          .absolute{position:absolute;top:8px;right:8px;width:110px;height:64px;background:#ffd1a3;border-radius:6px}
+          .sticky-area{height:150px;overflow:auto;border-radius:8px}
+          .sticky{height:40px;background:#c7f7c7;position:sticky;top:0;border-radius:6px}
+          .spacer{height:220px}
+          .fixed{position:fixed;bottom:12px;right:12px;width:64px;height:64px;background:#f7c4c4;border-radius:8px}
+        </style>
+      </head>
+      <body>
+        <div class="wrapper">
+          <div class="row">
+            <div class="box static"></div>
+            <div class="box relative"></div>
+            <div class="abs-container">
+              <div class="absolute"></div>
+            </div>
+          </div>
+
+          <div class="sticky-area">
+            <div class="sticky"></div>
+            <div class="spacer"></div>
+          </div>
+        </div>
+
+        <div class="fixed"></div>
+      </body>
+      </html>

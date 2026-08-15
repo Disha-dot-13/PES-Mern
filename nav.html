@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        
+        @media(max-width:700px) {
+            .navbar{
+                
+
+            }
+
+            
+        }
+        .navbar{
+            position:relative;
+            display:flex;
+            justify-content:center; /* center the nav container */
+            align-items:center;
+            background-color:blue;
+            height:100px;
+            padding:0 12px;
+            color:#fff;
+        }
+
+        .logo{
+            position:absolute;
+            left:12px;
+            top:50%;
+            transform:translateY(-50%);
+            margin:0;
+            color:#fff;
+            font-size:1.1rem;
+            font-weight:700;
+        }
+        
+        .container{
+            display:flex;
+            justify-content:center; /* center items within the container */
+            gap:16px;
+            margin:0 auto;
+            width:auto;
+            max-width:700px;
+        }
+        li{
+            list-style:none;
+            color:inherit;
+            padding:8px 12px;
+            border-radius:6px;
+        }
+        li.hover{
+            background-color:green;
+            text-decoration:underline;
+            color:white;
+            padding:10px;
+            border-radius:5px;
+        }
+
+    </style>
+    
+</head>
+
+
+
+<body>
+    
+    <div class="navbar">
+        <h3 class="logo">My Site</h3>
+        <ul class="container">
+            <li>home</li>
+            <li>about</li>
+            <li>contact</li>
+            <li>service</li>
+        </ul>
+    </div>
+    
+</body>
+</html>
