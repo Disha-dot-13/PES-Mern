@@ -24,27 +24,17 @@ const App = () => {
       <Routes>
 
         {/* Main Pages */}
-
         <Route path="/" element={<Home />} />
-
         <Route path="/about" element={<About />} />
-
         <Route path="/service" element={<Service />} />
-
         <Route path="/contact" element={<Contact />} />
 
-
         {/* React Examples */}
-
         <Route path="/state" element={<State />} />
-
         <Route path="/form" element={<Form />} />
-
         <Route path="/effect" element={<Effect />} />
 
-
         {/* Products */}
-
         <Route path="/products" element={<Products />} />
 
         <Route
@@ -53,7 +43,6 @@ const App = () => {
         />
 
       </Routes>
-
     </>
   );
 };

@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 const Productsdetails = () => {
 
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
 
     const getProduct = async () => {
-
       try {
 
         const res = await fetch(
@@ -19,14 +19,10 @@ const Productsdetails = () => {
 
         const data = await res.json();
 
-        console.log(data);
-
         setProduct(data);
 
       } catch (error) {
-
         console.log(error);
-
       }
     };
 
@@ -34,42 +30,36 @@ const Productsdetails = () => {
 
   }, [id]);
 
-  if (!product) {
-    return <h2>Loading...</h2>;
-  }
-
   return (
     <div>
 
-      <h1>{product.title}</h1>
+      <button onClick={() => navigate('/products')}>
+        ← Back to Products
+      </button>
 
-      <img
-        src={product.thumbnail}
-        alt={product.title}
-        width="300"
-      />
+      {!product ? (
+        <h2>Loading...</h2>
+      ) : (
+        <>
+          <h1>{product.title}</h1>
 
-      <h2>Price: ${product.price}</h2>
+          <img
+            src={product.thumbnail}
+            alt={product.title}
+            width="300"
+          />
 
-      <p>
-        Description: {product.description}
-      </p>
+          <h2>Price: ${product.price}</h2>
 
-      <p>
-        Category: {product.category}
-      </p>
+          <p>{product.description}</p>
 
-      <p>
-        Brand: {product.brand}
-      </p>
+          <p>Category: {product.category}</p>
 
-      <p>
-        Rating: {product.rating}
-      </p>
+          <p>Rating: {product.rating}</p>
 
-      <p>
-        Stock: {product.stock}
-      </p>
+          <p>Stock: {product.stock}</p>
+        </>
+      )}
 
     </div>
   );
